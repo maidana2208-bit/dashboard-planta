@@ -20,43 +20,31 @@
 }
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.5;min-height:100vh;}
 .mono{font-family:'JetBrains Mono',monospace;}
-
-/* LAYOUT */
 .wrap{padding:20px 24px;}
 .header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border);}
-.header-brand{display:flex;align-items:center;gap:14px;}
 .brand-icon{width:44px;height:44px;background:var(--cyan-bg);border:1px solid var(--cyan-border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;}
 .brand-title{font-size:20px;font-weight:800;letter-spacing:.5px;color:var(--text);}
 .brand-sub{font-size:12px;color:var(--muted);margin-top:1px;}
-.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;}
 .reloj-box{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;color:var(--cyan);letter-spacing:1px;}
-.fecha-box{font-size:12px;color:var(--muted);}
-.update-row{display:flex;align-items:center;gap:10px;}
-.update-txt{font-size:11px;color:var(--dim);font-family:'JetBrains Mono',monospace;}
 .btn-ref{background:var(--surface2);border:1px solid var(--border);color:var(--muted);font-size:12px;font-weight:500;padding:5px 14px;border-radius:6px;cursor:pointer;transition:all .15s;font-family:'Inter',sans-serif;}
 .btn-ref:hover{border-color:var(--cyan-border);color:var(--cyan);background:var(--cyan-bg);}
-
-/* KPI ROW */
+.update-txt{font-size:11px;color:var(--dim);font-family:'JetBrains Mono',monospace;}
 .kpi-row{display:grid;grid-template-columns:1fr 1fr 1fr 2.2fr;gap:14px;margin-bottom:16px;}
 .kpi{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;position:relative;overflow:hidden;}
 .kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
 .kpi.cyan::before{background:var(--cyan);}
-.kpi.green::before{background:var(--green);}
 .kpi.amber::before{background:var(--amber);}
 .kpi.red::before{background:var(--red);}
 .kpi-lbl{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
 .kpi-val{font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:600;line-height:1;}
 .kpi.cyan .kpi-val{color:var(--cyan);}
-.kpi.green .kpi-val{color:var(--green);}
 .kpi.amber .kpi-val{color:var(--amber);}
 .kpi.red .kpi-val{color:var(--red);}
 .kpi-sub{font-size:12px;color:var(--muted);margin-top:6px;}
-
-/* PUESTOS */
 .puestos-block{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;}
 .sec-lbl{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
 .puestos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;}
-.puesto-chip{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;text-align:center;transition:border-color .2s;}
+.puesto-chip{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;text-align:center;}
 .puesto-chip.activo{border-color:var(--cyan-border);background:var(--cyan-bg);}
 .puesto-chip.pausa{border-color:var(--amber-border);background:var(--amber-bg);}
 .puesto-chip.fin{border-color:var(--green-border);background:var(--green-bg);}
@@ -66,87 +54,59 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-
 .puesto-chip.pausa .p-pz{color:var(--amber);}
 .puesto-chip.fin .p-pz{color:var(--green);}
 .p-est{font-size:11px;color:var(--muted);margin-top:4px;}
-
-/* GRID */
 .grid-3{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-bottom:14px;}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
 .panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;}
 .panel-title{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
 .pt-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
 .pt-txt{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
-
-/* TABLA */
 table{width:100%;border-collapse:collapse;font-size:13.5px;}
 th{font-size:10.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--dim);padding:6px 10px;text-align:left;border-bottom:1px solid var(--border);}
 td{padding:9px 10px;border-bottom:1px solid var(--surface2);vertical-align:middle;color:var(--text);}
 tr:last-child td{border-bottom:none;}
 tr:hover td{background:var(--surface2);}
-
-/* BADGES */
-.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;letter-spacing:.5px;padding:4px 9px;border-radius:5px;}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:4px 9px;border-radius:5px;}
 .badge.fin{background:var(--green-bg);color:var(--green);border:1px solid var(--green-border);}
 .badge.pausa{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-border);}
 .badge.activo{background:var(--cyan-bg);color:var(--cyan);border:1px solid var(--cyan-border);}
 .badge.nd{background:var(--surface2);color:var(--muted);border:1px solid var(--border);}
-
-/* FECHA PROMETIDA */
 .fc{display:inline-flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;padding:4px 9px;border-radius:5px;}
 .fc.ok{background:var(--green-bg);color:var(--green);border:1px solid var(--green-border);}
 .fc.pronto{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-border);}
 .fc.urgente{background:var(--red-bg);color:var(--red);border:1px solid var(--red-border);}
 .fc-dias{font-size:11px;color:var(--dim);margin-left:3px;}
-
-/* BARRAS */
 .bar-item{margin-bottom:16px;}
 .bar-header{display:flex;justify-content:space-between;margin-bottom:5px;font-size:13px;}
-.bar-name{color:var(--text);}
-.bar-puesto{font-size:11px;color:var(--muted);margin-left:5px;}
-.bar-val{font-family:'JetBrains Mono',monospace;font-size:12px;}
 .bar-bg{height:7px;background:var(--surface2);border-radius:4px;overflow:hidden;}
 .bar-fill{height:100%;border-radius:4px;transition:width .4s;}
-
-/* ALERTAS / PAUSAS */
 .alerta-item{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--surface2);font-size:13.5px;color:var(--text);}
 .alerta-item:last-child{border-bottom:none;}
-.alerta-val{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--amber);}
 .pausa-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--surface2);font-size:13.5px;color:var(--text);}
 .pausa-item:last-child{border-bottom:none;}
-.pausa-val{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);}
-
-/* SECTOR TAG */
 .stag{font-size:11px;font-weight:500;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);}
-
-/* OP NUM */
 .opn{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--cyan);}
-
-/* CARGANDO */
 #loading{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:999;gap:16px;}
 .spin{width:42px;height:42px;border:3px solid var(--border);border-top-color:var(--cyan);border-radius:50%;animation:sp .8s linear infinite;}
 @keyframes sp{to{transform:rotate(360deg);}}
 #loading p{font-size:13px;color:var(--muted);font-family:'JetBrains Mono',monospace;}
-
-/* ERROR */
 .err-box{background:var(--red-bg);border:1px solid var(--red-border);color:var(--red);padding:14px 18px;border-radius:10px;font-size:13.5px;margin-bottom:14px;line-height:1.6;display:none;}
 </style>
 </head>
 <body>
-
 <div id="loading"><div class="spin"></div><p>Cargando datos...</p></div>
-
 <div id="app" class="wrap" style="display:none">
   <div class="err-box" id="err"></div>
-
   <div class="header">
-    <div class="header-brand">
+    <div style="display:flex;align-items:center;gap:14px;">
       <div class="brand-icon">🏭</div>
       <div>
         <div class="brand-title">Dashboard Planta</div>
         <div class="brand-sub" id="fecha-hoy"></div>
       </div>
     </div>
-    <div class="header-right">
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;">
       <div class="reloj-box" id="reloj"></div>
-      <div class="update-row">
+      <div style="display:flex;align-items:center;gap:10px;">
         <span class="update-txt" id="ult-update"></span>
         <button class="btn-ref" id="btn-ref" onclick="fetchAll()">↺ Actualizar</button>
       </div>
@@ -154,21 +114,9 @@ tr:hover td{background:var(--surface2);}
   </div>
 
   <div class="kpi-row">
-    <div class="kpi cyan">
-      <div class="kpi-lbl">Cumplimiento</div>
-      <div class="kpi-val" id="k-cumpl">—</div>
-      <div class="kpi-sub">Sector productivo</div>
-    </div>
-    <div class="kpi amber">
-      <div class="kpi-lbl">Horas pausa</div>
-      <div class="kpi-val" id="k-pausa">—</div>
-      <div class="kpi-sub" id="k-perd">—</div>
-    </div>
-    <div class="kpi red">
-      <div class="kpi-lbl">Alertas activas</div>
-      <div class="kpi-val" id="k-alert">—</div>
-      <div class="kpi-sub" id="k-alert-sub">—</div>
-    </div>
+    <div class="kpi cyan"><div class="kpi-lbl">Cumplimiento</div><div class="kpi-val" id="k-cumpl">—</div><div class="kpi-sub">Sector productivo</div></div>
+    <div class="kpi amber"><div class="kpi-lbl">Horas pausa</div><div class="kpi-val" id="k-pausa">—</div><div class="kpi-sub" id="k-perd">—</div></div>
+    <div class="kpi red"><div class="kpi-lbl">Alertas activas</div><div class="kpi-val" id="k-alert">—</div><div class="kpi-sub" id="k-alert-sub" style="font-size:11px;line-height:1.4;">—</div></div>
     <div class="puestos-block">
       <div class="sec-lbl">Piezas hoy — por puesto</div>
       <div class="puestos-grid" id="puestos-grid"></div>
@@ -177,31 +125,17 @@ tr:hover td{background:var(--surface2);}
 
   <div class="grid-3">
     <div class="panel">
-      <div class="panel-title">
-        <span class="pt-dot" style="background:var(--cyan)"></span>
-        <span class="pt-txt">Estado de operarios en planta</span>
-      </div>
-      <table>
-        <thead><tr>
-          <th>Puesto</th><th>Operario</th><th>Sector</th><th>Estado</th>
-          <th>OP</th><th>Piezas</th><th>Pz/h</th><th>Obj</th><th>Cumpl.</th><th>Min pausa</th>
-        </tr></thead>
-        <tbody id="t-ops"></tbody>
-      </table>
+      <div class="panel-title"><span class="pt-dot" style="background:var(--cyan)"></span><span class="pt-txt">Estado de operarios en planta</span></div>
+      <table><thead><tr><th>Puesto</th><th>Operario</th><th>Sector</th><th>Estado</th><th>OP</th><th>Piezas</th><th>Pz/h</th><th>Obj</th><th>Cumpl.</th><th>Min pausa</th></tr></thead>
+      <tbody id="t-ops"></tbody></table>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px;">
       <div class="panel">
-        <div class="panel-title">
-          <span class="pt-dot" style="background:var(--amber)"></span>
-          <span class="pt-txt">Alertas</span>
-        </div>
+        <div class="panel-title"><span class="pt-dot" style="background:var(--amber)"></span><span class="pt-txt">Alertas</span></div>
         <div id="p-alertas"></div>
       </div>
       <div class="panel">
-        <div class="panel-title">
-          <span class="pt-dot" style="background:var(--purple)"></span>
-          <span class="pt-txt">Pausas por motivo</span>
-        </div>
+        <div class="panel-title"><span class="pt-dot" style="background:var(--purple)"></span><span class="pt-txt">Pausas por motivo</span></div>
         <div id="p-pausas"></div>
       </div>
     </div>
@@ -209,65 +143,55 @@ tr:hover td{background:var(--surface2);}
 
   <div class="grid-2">
     <div class="panel">
-      <div class="panel-title">
-        <span class="pt-dot" style="background:var(--green)"></span>
-        <span class="pt-txt">Cumplimiento por operario</span>
-      </div>
+      <div class="panel-title"><span class="pt-dot" style="background:var(--green)"></span><span class="pt-txt">Cumplimiento por operario</span></div>
       <div id="p-bars"></div>
     </div>
     <div class="panel">
-      <div class="panel-title">
-        <span class="pt-dot" style="background:var(--purple)"></span>
-        <span class="pt-txt">KPIs mensuales</span>
-      </div>
-      <table>
-        <thead><tr><th>Operario</th><th>Puesto</th><th>Piezas</th><th>Pz/h</th><th>Pérdida</th></tr></thead>
-        <tbody id="t-mensual"></tbody>
-      </table>
+      <div class="panel-title"><span class="pt-dot" style="background:var(--purple)"></span><span class="pt-txt">KPIs mensuales</span></div>
+      <table><thead><tr><th>Operario</th><th>Puesto</th><th>Piezas</th><th>Pz/h</th><th>Pérdida</th></tr></thead>
+      <tbody id="t-mensual"></tbody></table>
     </div>
   </div>
 
   <div class="panel" style="margin-bottom:14px;">
-    <div class="panel-title">
-      <span class="pt-dot" style="background:var(--amber)"></span>
-      <span class="pt-txt">OPs del día — fecha de entrega</span>
-    </div>
-    <table>
-      <thead><tr>
-        <th>OP</th><th>Puesto</th><th>Operario</th><th>Flujo</th>
-        <th>Fecha prometida</th><th>Min trabajo</th><th>Min pausa</th>
-        <th>Piezas</th><th>Estado</th><th>Pausas</th>
-      </tr></thead>
-      <tbody id="t-ops-det"></tbody>
-    </table>
+    <div class="panel-title"><span class="pt-dot" style="background:var(--amber)"></span><span class="pt-txt">OPs del día — fecha de entrega</span></div>
+    <table><thead><tr><th>OP</th><th>Puesto</th><th>Operario</th><th>Flujo</th><th>Fecha prometida</th><th>Min trabajo</th><th>Min pausa</th><th>Piezas</th><th>Estado</th><th>Pausas</th></tr></thead>
+    <tbody id="t-ops-det"></tbody></table>
   </div>
 
   <div class="panel">
-    <div class="panel-title">
-      <span class="pt-dot" style="background:var(--blue)"></span>
-      <span class="pt-txt">Producción del día — Pz/h real vs objetivo</span>
-    </div>
+    <div class="panel-title"><span class="pt-dot" style="background:var(--blue)"></span><span class="pt-txt">Producción del día — Pz/h real vs objetivo</span></div>
     <div style="display:flex;gap:16px;margin-bottom:10px;font-size:12px;color:var(--muted);">
       <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;border-radius:2px;background:#388bfd;display:inline-block;"></span>Pz/h Real</span>
       <span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;border-radius:2px;background:#e3b341;display:inline-block;"></span>Objetivo</span>
     </div>
     <div style="position:relative;width:100%;height:260px;">
-      <canvas id="chart-pph" role="img" aria-label="Gráfico de barras de piezas por hora real versus objetivo por operario y puesto">Piezas por hora real vs objetivo por operario.</canvas>
+      <canvas id="chart-pph" role="img" aria-label="Gráfico de barras piezas por hora real versus objetivo">Piezas por hora real vs objetivo por operario.</canvas>
     </div>
   </div>
 </div>
 
 <script>
+// ── GIDs de cada hoja ──────────────────────────────────
 const PUB_ID='2PACX-1vSzStxmg58-TMFg4zQqK3NdPO9a1qbacNGLLt9Wzy54RpCj4CEBVrVepCrNMB5X2l46zmk76LZZqdS7';
+const GIDS={
+  KPI_DIARIO:     '2007217681',
+  KPI_MENSUAL:    '1729159532',
+  KPI_SECTORIAL:  '2089832892',
+  KPI_OP_RESUMEN: '433449887',
+  ALERTAS:        '1935462789',
+  ALERTAS_RES:    '1103417522',
+  PAUSAS:         '1103417522',
+};
 const REFRESH=30;
 
-function pubUrl(sheet){
-  return `https://docs.google.com/spreadsheets/d/e/${PUB_ID}/pub?output=csv&single=true&sheet=${encodeURIComponent(sheet)}`;
+function pubUrl(gid){
+  return `https://docs.google.com/spreadsheets/d/e/${PUB_ID}/pub?output=csv&gid=${gid}`;
 }
 
-async function fetchSheet(name){
-  const r=await fetch(pubUrl(name));
-  if(!r.ok) throw new Error(`Hoja "${name}" devolvió ${r.status}`);
+async function fetchSheet(gid){
+  const r=await fetch(pubUrl(gid));
+  if(!r.ok) throw new Error(`Error ${r.status} al leer GID ${gid}`);
   return parseCSV(await r.text());
 }
 
@@ -276,7 +200,7 @@ function parseCSV(txt){
   if(lines.length<2) return [];
   const hdrs=csvSplit(lines[0]).map(h=>h.replace(/^"|"$/g,'').trim());
   return lines.slice(1).map(l=>{
-    const v=csvSplit(l), o={};
+    const v=csvSplit(l),o={};
     hdrs.forEach((h,i)=>o[h]=(v[i]||'').replace(/^"|"$/g,'').trim());
     return o;
   }).filter(r=>Object.values(r).some(x=>x));
@@ -333,15 +257,17 @@ function puestoLbl(ests){
 let chart=null;
 
 function render({diario,mensual,sectorial,ops,alertas,alertasRes,pausas}){
+  // KPI Sectorial — columnas: SECTOR, PIEZAS, HORAS_TRABAJO, HORAS_PAUSA, PZ_HORA_REAL, CUMPLIMIENTO, PERDIDA_%, EFICIENCIA
   const s=sectorial[0]||{};
-  document.getElementById('k-cumpl').textContent=s['CUMPLIMIENTO']||s['CUMPLIMIENTO_%']||'—';
+  document.getElementById('k-cumpl').textContent=s['CUMPLIMIENTO']||'—';
   document.getElementById('k-pausa').textContent=s['HORAS_PAUSA']||'—';
   document.getElementById('k-perd').textContent='Pérdida: '+(s['PERDIDA_%']||'—');
   document.getElementById('k-alert').textContent=alertas.length;
   document.getElementById('k-alert-sub').textContent=alertas.length
-    ?alertas.map(a=>`${a['PUESTO']} ${a['OPERARIO']}`).join(', ')
+    ?alertas.map(a=>(a['PUESTO']||'')+' '+(a['OPERARIO']||'')).join(', ')
     :'Sin alertas';
 
+  // Puestos — desde KPI_DIARIO: PUESTO, PIEZAS_HECHAS, ESTADO_ACTUAL
   const pm={};
   diario.forEach(r=>{
     const p=r['PUESTO']||''; if(!p) return;
@@ -349,15 +275,16 @@ function render({diario,mensual,sectorial,ops,alertas,alertasRes,pausas}){
     pm[p].pz+=parseInt(r['PIEZAS_HECHAS']||0);
     pm[p].est.push(r['ESTADO_ACTUAL']||'');
   });
-  document.getElementById('puestos-grid').innerHTML=Object.entries(pm).map(([n,d])=>`
-    <div class="puesto-chip ${puestoCls(d.est)}">
+  document.getElementById('puestos-grid').innerHTML=Object.entries(pm).map(([n,d])=>
+    `<div class="puesto-chip ${puestoCls(d.est)}">
       <div class="p-nom">${n}</div>
       <div class="p-pz">${d.pz}</div>
       <div class="p-est">${puestoLbl(d.est)}</div>
     </div>`).join('')||'<span style="color:var(--muted);font-size:13px">Sin datos hoy</span>';
 
+  // Tabla operarios — KPI_DIARIO: PUESTO, OPERARIO, SECTOR, ESTADO_ACTUAL, OP, PIEZAS_HECHAS, PIEZAS_HORA_REAL, OBJ_PIEZAS_HORA, CUMPLIMIENTO_%, MIN_PAUSA
   document.getElementById('t-ops').innerHTML=diario.map(r=>{
-    const pph=num(r['PZ_HORA_REAL']||r['PIEZAS_HORA_REAL']);
+    const pph=num(r['PIEZAS_HORA_REAL']);
     const mp=num(r['MIN_PAUSA']);
     const pc=mp>60?'var(--red)':mp>0?'var(--amber)':'var(--green)';
     return `<tr>
@@ -368,12 +295,13 @@ function render({diario,mensual,sectorial,ops,alertas,alertasRes,pausas}){
       <td class="opn">${r['OP']||'—'}</td>
       <td class="mono">${r['PIEZAS_HECHAS']||0}</td>
       <td class="mono" style="color:var(--cyan)">${Math.round(pph)}</td>
-      <td class="mono" style="color:var(--muted)">${r['OBJ_PZ_H']||'—'}</td>
+      <td class="mono" style="color:var(--muted)">${r['OBJ_PIEZAS_HORA']||'—'}</td>
       <td class="mono" style="color:var(--green)">${r['CUMPLIMIENTO_%']||'—'}</td>
       <td class="mono" style="color:${pc}">${mp.toFixed(2)}</td>
     </tr>`;
   }).join('')||'<tr><td colspan="10" style="color:var(--muted);text-align:center;padding:20px">Sin datos hoy</td></tr>';
 
+  // Alertas — ALERTAS_RESUMEN: ALERTA
   document.getElementById('p-alertas').innerHTML=alertasRes.length
     ?alertasRes.map(r=>{
         const t=r['ALERTA']||Object.values(r)[0]||'';
@@ -381,40 +309,44 @@ function render({diario,mensual,sectorial,ops,alertas,alertasRes,pausas}){
       }).join('')
     :'<div class="alerta-item" style="color:var(--green)">✓ Sin alertas activas</div>';
 
+  // Pausas — KPI_MOTIVOS_PAUSA: MOTIVO, MINUTOS, CANTIDAD
   document.getElementById('p-pausas').innerHTML=pausas.length
     ?pausas.map(r=>`<div class="pausa-item">
         <span>${r['MOTIVO']||'—'}</span>
-        <span class="pausa-val">${r['MINUTOS']||0} min · ${r['CANTIDAD']||0}x</span>
+        <span class="mono" style="font-size:12px;color:var(--muted)">${num(r['MINUTOS']).toFixed(2)} min · ${r['CANTIDAD']||0}x</span>
       </div>`).join('')
     :'<div style="color:var(--muted);font-size:13px;padding:4px 0">Sin pausas registradas</div>';
 
-  const maxP=Math.max(...diario.map(r=>num(r['PZ_HORA_REAL']||r['PIEZAS_HORA_REAL'])),1);
+  // Barras cumplimiento
+  const maxP=Math.max(...diario.map(r=>num(r['PIEZAS_HORA_REAL'])),1);
   document.getElementById('p-bars').innerHTML=diario.map(r=>{
-    const pph=num(r['PZ_HORA_REAL']||r['PIEZAS_HORA_REAL']);
-    const obj=num(r['OBJ_PZ_H']);
+    const pph=num(r['PIEZAS_HORA_REAL']);
+    const obj=num(r['OBJ_PIEZAS_HORA']);
     const pct=Math.min(100,Math.round(pph/maxP*100));
     const col=obj>0?(pph>=obj*10?'#56d364':pph>=obj*5?'#e3b341':'#f85149'):'#79c0ff';
     return `<div class="bar-item">
       <div class="bar-header">
-        <span class="bar-name">${r['OPERARIO']||'—'}<span class="bar-puesto">${r['PUESTO']||''}</span></span>
-        <span class="bar-val" style="color:${col}">${Math.round(pph)} pz/h</span>
+        <span style="color:var(--text)">${r['OPERARIO']||'—'} <span style="color:var(--muted);font-size:11px">${r['PUESTO']||''}</span></span>
+        <span class="mono" style="color:${col}">${Math.round(pph)} pz/h</span>
       </div>
       <div class="bar-bg"><div class="bar-fill" style="width:${pct}%;background:${col}"></div></div>
     </div>`;
   }).join('');
 
+  // KPI Mensual — KPI_MENSUAL: MES_CLAVE, PUESTO, OPERARIO, PIEZAS_HECHAS, MIN_TRABAJO, PZ_POR_HORA, OBJ_PZ_POR_HORA, CUMPLIMIENTO_%, DIF_PZ_POR_HORA
   document.getElementById('t-mensual').innerHTML=mensual.map(r=>{
-    const p=num(r['PERDIDA_%']);
-    const pc=p>20?'var(--red)':p>10?'var(--amber)':'var(--green)';
+    const cumpl=r['CUMPLIMIENTO_%']||'—';
+    const pph=Math.round(num(r['PZ_POR_HORA']||r['PIEZAS_HORA_REAL']));
     return `<tr>
       <td>${r['OPERARIO']||'—'}</td>
       <td>${r['PUESTO']||'—'}</td>
-      <td class="mono">${r['PIEZAS']||0}</td>
-      <td class="mono" style="color:var(--cyan)">${Math.round(num(r['PZ_HORA_REAL']))}</td>
-      <td class="mono" style="color:${pc}">${r['PERDIDA_%']||'—'}</td>
+      <td class="mono">${r['PIEZAS_HECHAS']||0}</td>
+      <td class="mono" style="color:var(--cyan)">${pph}</td>
+      <td class="mono" style="color:var(--green)">${cumpl}</td>
     </tr>`;
   }).join('');
 
+  // OPs detalle — KPI_OP_RESUMEN: OP, FECHA_PROMETIDA, FLUJO, PUESTO, OPERARIO, MIN_TRABAJO, MIN_PAUSA, PIEZAS, ESTADO_FINAL, CANT_PAUSAS
   document.getElementById('t-ops-det').innerHTML=ops.map(r=>{
     const mp=num(r['MIN_PAUSA']);
     const pc=mp>60?'var(--red)':mp>0?'var(--amber)':'var(--muted)';
@@ -432,10 +364,10 @@ function render({diario,mensual,sectorial,ops,alertas,alertasRes,pausas}){
     </tr>`;
   }).join('')||'<tr><td colspan="10" style="color:var(--muted);text-align:center;padding:20px">Sin OPs hoy</td></tr>';
 
+  // Gráfico
   const labels=diario.map(r=>`${r['OPERARIO']||''} / ${r['PUESTO']||''}`);
-  const dReal=diario.map(r=>Math.round(num(r['PZ_HORA_REAL']||r['PIEZAS_HORA_REAL'])));
-  const dObj=diario.map(r=>num(r['OBJ_PZ_H']));
-
+  const dReal=diario.map(r=>Math.round(num(r['PIEZAS_HORA_REAL'])));
+  const dObj=diario.map(r=>num(r['OBJ_PIEZAS_HORA']));
   if(chart){
     chart.data.labels=labels;
     chart.data.datasets[0].data=dReal;
@@ -468,13 +400,13 @@ async function fetchAll(){
   document.getElementById('err').style.display='none';
   try{
     const [diario,mensual,sectorial,ops,alertas,alertasRes,pausas]=await Promise.all([
-      fetchSheet('KPI_DIARIO'),
-      fetchSheet('KPI_MENSUAL'),
-      fetchSheet('KPI_SECTORIAL'),
-      fetchSheet('KPI_OP_RESUMEN'),
-      fetchSheet('ALERTAS'),
-      fetchSheet('ALERTAS_RESUMEN'),
-      fetchSheet('KPI_MOTIVOS_PAUSA'),
+      fetchSheet(GIDS.KPI_DIARIO),
+      fetchSheet(GIDS.KPI_MENSUAL),
+      fetchSheet(GIDS.KPI_SECTORIAL),
+      fetchSheet(GIDS.KPI_OP_RESUMEN),
+      fetchSheet(GIDS.ALERTAS),
+      fetchSheet(GIDS.ALERTAS_RES),
+      fetchSheet(GIDS.PAUSAS),
     ]);
     render({diario,mensual,sectorial,ops,alertas,alertasRes,pausas});
     document.getElementById('loading').style.display='none';
@@ -485,15 +417,13 @@ async function fetchAll(){
     document.getElementById('app').style.display='block';
     const er=document.getElementById('err');
     er.style.display='block';
-    er.innerHTML=`<strong>Error al cargar datos:</strong> ${e.message}<br><br>
-      Asegurate que la planilla esté publicada:<br>
-      Archivo → Compartir → Publicar en la web → Todo el documento → CSV → Publicar`;
+    er.innerHTML=`<strong>Error:</strong> ${e.message}`;
   }
   btn.textContent='↺ Actualizar'; btn.disabled=false;
 }
 
 fetchAll();
-setInterval(fetchAll, REFRESH*1000);
+setInterval(fetchAll,REFRESH*1000);
 </script>
 </body>
 </html>
